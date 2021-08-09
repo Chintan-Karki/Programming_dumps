@@ -54,7 +54,13 @@
 	width: 208px;
 	height: 355px;
 	border-radius: 15px;
+	box-shadow: 7px -5px 0 -3px white, 7px -5px rgba(151, 13, 206, 0.562);
+	transition: box-shadow 0.2s, top 0.2s, left 0.2s;
 	cursor: pointer;
+}
+.container-div:hover {
+	top: 515px;
+	box-shadow: 0 0 0 -1px var(--background), 0 0 0 0 var(--green);
 }
 
 .image-div {
