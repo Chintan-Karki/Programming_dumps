@@ -1,7 +1,5 @@
 * {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	/* user-select: none; */
+	max-width: 940px;
 }
 
 .chintan {
@@ -37,14 +35,22 @@
 	color: #000000;
 }
 
+.unselectable {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
 .earth {
 	position: absolute;
+	display: block;
 	right: 0;
+	width: 20%;
 	/* left: 77.71%; */
 	/* right: -4.19%; */
 	top: -2.92%;
 	bottom: 77.73%;
-	pointer-events: none;
 }
 
 /** Common */
@@ -55,45 +61,45 @@
 	width: 208px;
 	height: 355px;
 	border-radius: 15px;
-	box-shadow: 7px -5px 0 -3px white, 7px -5px rgba(151, 13, 206, 0.562);
+
 	transition: box-shadow 0.2s, top 0.2s, left 0.2s;
 	cursor: pointer;
+	box-shadow: 0 0 0 -1px var(--background), 0 0 0 0 var(--green);
 }
 .container-div:hover {
-	top: 515px;
-	box-shadow: 0 0 0 -1px var(--background), 0 0 0 0 var(--green);
+	box-shadow: 7px -5px 0 -3px white, 7px -5px rgba(3, 65, 39, 0.712);
 }
 
 .image-div {
 	position: absolute;
-	pointer-events: none;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .title-text {
 	position: absolute;
 	font-family: "Poppins";
 	font-style: normal;
-	font-weight: bold;
-	font-size: 35px;
+	font-weight: 700;
+	font-size: 32px;
 	line-height: 38px;
 	height: 80px;
 	cursor: pointer;
+	pointer-events: none;
 
-	top: 710px;
+	top: 690px;
 
 	display: flex;
 	align-items: flex-end;
 
-	color: #333332;
+	color: #363636;
 }
 
 .share-icon {
 	cursor: pointer;
 	position: absolute;
-	width: 17.78px;
-	height: 16px;
-	top: 839px;
+	height: 24px;
+	top: 820px;
 }
 
 /* About me */
@@ -102,7 +108,9 @@
 	left: 87px;
 	background: linear-gradient(0deg, #9dd4fb, #9dd4fb), #ffa128;
 }
-
+.aboutme-container-div:hover {
+	box-shadow: 7px -5px 0 -3px white, 7px -5px rgba(3, 65, 39, 0.712);
+}
 .aboutme-img {
 	width: 214px;
 	height: 267px;
@@ -123,7 +131,7 @@
 
 .services-container-div {
 	left: 345px;
-	background: linear-gradient(0deg, #ff9db5, #ff9db5), #ffa128;
+	background: rgba(255, 129, 129, 0.94);
 }
 
 .services-img {
