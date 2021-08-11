@@ -7,27 +7,32 @@ import {
 	getUnresolvedBugs,
 	getBugsByUser,
 } from "./store/bugs";
+
 import { userAdded } from "./store/users";
 
 const store = configureStore();
 
-console.log("Starter state of the store: ", store.getState());
-
-store.subscribe(() => {
-	console.log("Store Changed", store.getState());
+store.dispatch((dispatch, getState) => {
+	dispatch({ type: "bugsRecieved", bugs: [1, 2, 3] });
 });
 
-console.log("Bug Added through action dispatch");
-store.dispatch(actions.projectsAdded({ name: "FIRST PROJECT" }));
+// console.log("Starter state of the store: ", store.getState());
 
-store.dispatch(bugAdded({ description: "1ST bug" }));
-store.dispatch(bugAssignedToUser({ bugId: 1, userId: 1 }));
-store.dispatch(bugResolved({ id: 2 }));
+// store.subscribe(() => {
+// 	console.log("Store Changed", store.getState());
+// });
 
-store.dispatch(userAdded({ name: "User 1" }));
+// console.log("Bug Added through action dispatch");
+// store.dispatch(actions.projectsAdded({ name: "FIRST PROJECT" }));
 
-const unresolvedBugs = getUnresolvedBugs(store.getState());
-console.log(unresolvedBugs);
+// store.dispatch(bugAdded({ description: "1ST bug" }));
+// store.dispatch(bugAssignedToUser({ bugId: 1, userId: 1 }));
+// store.dispatch(bugResolved({ id: 2 }));
 
-const bugsByUser = getBugsByUser(1)(store.getState());
-console.log(bugsByUser);
+// store.dispatch(userAdded({ name: "User 1" }));
+
+// const unresolvedBugs = getUnresolvedBugs(store.getState());
+// console.log(unresolvedBugs);
+
+// const bugsByUser = getBugsByUser(1)(store.getState());
+// console.log(bugsByUser);
