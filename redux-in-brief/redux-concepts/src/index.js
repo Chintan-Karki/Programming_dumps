@@ -12,9 +12,7 @@ import { userAdded } from "./store/users";
 
 const store = configureStore();
 
-store.dispatch((dispatch, getState) => {
-	dispatch({ type: "bugsRecieved", bugs: [1, 2, 3] });
-});
+store.dispatch({ type: "error", payload: { message: "error occured" } });
 
 // console.log("Starter state of the store: ", store.getState());
 
