@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 // import { createStore } from "redux";
 import reducer from "./reducer";
 import logger from "./middleware/logger";
