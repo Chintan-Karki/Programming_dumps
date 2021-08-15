@@ -1,13 +1,17 @@
-import React from "react";
+import { useState } from "react";
+import { calculateWinner } from "../helper/calculate";
 import Board from "./Board";
 
 const Game = () => {
+	const [board, setBoard] = useState(Array(9).fill(null));
+	const [xInNext, setXInNext] = useState(true);
+	const winner = calculateWinner(board);
 	const handleClick = () => {};
 	const jumpTo = () => {};
 	const renderMoves = () => {};
 	return (
 		<>
-			<Board onClick={() => handleClick} />
+			<Board squares={board} onClick={() => handleClick} />
 		</>
 	);
 };

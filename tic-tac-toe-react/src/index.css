@@ -3,6 +3,9 @@
 :root {
 	--primary-font: "Nunito", sans-serif;
 	--text-weight-900: 900;
+	--primary-purple: rgb(37, 20, 68);
+	--primary-green: rgb(0, 150, 112);
+	--primary-lightgreen: rgb(137, 255, 225);
 }
 
 body {
@@ -30,12 +33,12 @@ button {
 	border-radius: 4px;
 	padding: 0 1.65rem;
 	margin: 0.2rem;
-	color: rgb(0, 187, 140);
+	color: var(--primary-green);
 }
 
 button:hover {
-	background-color: rgb(75, 53, 116);
-	color: rgb(137, 255, 225);
+	background-color: var(--primary-purple);
+	color: var(--primary-lightgreen);
 }
 
 button:focus {

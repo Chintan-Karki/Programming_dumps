@@ -1,4 +1,4 @@
-function calculateWinner(squares) {
+export function calculateWinner(squares) {
 	const winningCombination = [
 		[0, 1, 2],
 		[3, 4, 5],
@@ -18,6 +18,6 @@ function calculateWinner(squares) {
 	return null;
 }
 
-const squares = [null, null, null, "X", "X", "X", null, null, null];
+// const squares = [null, null, null, "X", "X", "X", null, null, null];
 
-console.log(calculateWinner(squares));
+// console.log(calculateWinner(squares));
