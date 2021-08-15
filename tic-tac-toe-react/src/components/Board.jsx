@@ -1,13 +1,9 @@
 import Square from "./Square";
 
-const onClick = (value) => {
-	//...
-};
-
 const Board = ({ squares, onClick }) => (
 	<div className="Squares">
 		{squares.map((square, i) => (
-			<Square key={i} handleOnClick={() => onClick("dummy")} value={square} />
+			<Square key={i} onClick={() => onClick(i)} value={square} />
 		))}
 	</div>
 );

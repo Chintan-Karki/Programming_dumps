@@ -1,5 +1,5 @@
-const Square = ({ handleOnClick, value }) => (
-	<button onClick={handleOnClick}>{value}</button>
+const Square = ({ onClick, value }) => (
+	<button onClick={onClick}>{value}</button>
 );
 
 export default Square;

@@ -15,9 +15,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: rgb(234, 255, 241);
 }
-
+#root {
+	margin: auto 0;
+}
 h1 {
 	font-weight: var(--text-weight-900);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 button {
@@ -34,6 +39,50 @@ button {
 	padding: 0 1.65rem;
 	margin: 0.2rem;
 	color: var(--primary-green);
+	color: black;
+}
+
+.Squares {
+	margin: 0 auto;
+	margin-top: 8rem;
+	height: 250px;
+	width: 250px;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.container {
+	margin-top: 2rem;
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.resetBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	margin: 0 auto;
+	font-weight: 900;
+	font-size: 16px;
+	padding: 10px 20px;
+	color: #361b44;
+	transition: ease-in-out 150ms;
+}
+
+.resetBtn:hover {
+	transform: scale(1.2);
+}
+
+.Winner {
+	color: rgb(253, 101, 0);
 }
 
 button:hover {
@@ -42,13 +91,6 @@ button:hover {
 }
 
 button:focus {
-	opacity: 0.9;
-}
-
-.Squares {
-	margin: 35vh auto;
-	height: 250px;
-	width: 250px;
-	display: grid;
-	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	opacity: 0.95;
+	transition: opacity 0.2s;
 }
