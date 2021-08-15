@@ -1,9 +1,8 @@
-function App() {
-	return (
-		<div className="App">
-			<h1>tic-tac-toe</h1>
-		</div>
-	);
-}
+import React from "react";
+import Game from "./components/Game";
+
+export const App = () => {
+	return <Game />;
+};
 
 export default App;
