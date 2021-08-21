@@ -1,5 +1,5 @@
 const os = require("os");
-const math = require("./math");
+// const math = require("./math");
 
 console.log(os.type()); //      Darwin
 console.log(os.version()); //   Darwin Kernel Version 21.0.0: Mon Aug  2 00:18:13 PDT 2021; root:xnu-8019.30.9~9/RELEASE_ARM64_T8101
@@ -19,7 +19,3 @@ Expected output:
   ext: '.js',
   name: 'server' }
   */
-
-console.log(math.func("subtract", 2, 8));
-console.log(math.func("divide", 2, 8));
-console.log(math.add(1, 2));
