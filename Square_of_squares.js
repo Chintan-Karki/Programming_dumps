@@ -23,8 +23,8 @@
 // 26  =>  false
 
 var isSquare = function (n) {
-  let a = Math.sqrt(n);
-  return a >= 0.0 && Math.floor(a) === a && a !== Infinity;
+	let a = Math.sqrt(n);
+	return a >= 0.0 && Math.floor(a) === a && a !== Infinity;
 };
 
 // ! Alternatives

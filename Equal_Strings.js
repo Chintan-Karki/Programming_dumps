@@ -13,13 +13,13 @@
 // XO("zzoo") => false
 
 function XO(str, letter1, letter2) {
-  var sum = 0;
-  for (let i = 0; i < str.length; i++) {
-    let letter = str.charAt(i);
-    if (letter.toUpperCase() === letter1.toUpperCase()) sum++;
-    if (letter.toUpperCase() === letter2.toUpperCase()) sum--;
-  }
-  return sum == 0;
+	var sum = 0;
+	for (let i = 0; i < str.length; i++) {
+		let letter = str.charAt(i);
+		if (letter.toUpperCase() === letter1.toUpperCase()) sum++;
+		if (letter.toUpperCase() === letter2.toUpperCase()) sum--;
+	}
+	return sum == 0;
 }
 
 // ! TEST
