@@ -7,25 +7,75 @@
 		<title>Document</title>
 		<link href="./css/tailwind.css" rel="stylesheet" />
 	</head>
-	<body class="bg-gray-100 max-w-lg mx-auto sm:bg-green-200">
-		<div class="px-8 py-12">
-			<img class="h-14" src="./assets/logo.png" alt="A dummy logo" />
-			<img
-				class="mt-6 rounded-lg shadow-xl"
-				src="./assets/beach.jpeg"
-				alt="Beach Image"
-			/>
-			<h1 class="mt-6 text-xl font-bold text-gray-900">
-				Take some time and enjoy all you can.
-				<span class="text-green-600">Afterall, what's there to live for?</span>
-			</h1>
-			<p class="mt-3 text-gray-600">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-				explicabo non dolorum veritatis, ratione delectus rerum repellendus
-				totam neque quas quibusdam aperiam illum quaerat, architecto aspernatur
-				necessitatibus qui adipisci cumque.
-			</p>
-			<button class="mt-6 bg-green-500 px-6 py-4 rounded-lg shadow-lg uppercase tracking-wide text-sm font-bold text-green-100">Grab your escape..</button>
-		</div>
+	<body class="bg-green-100">
+		<article class="grid lg:grid-cols-2 2xl:grid-cols-5">
+			<div
+				class="
+					px-8
+					py-12
+					mx-auto
+					sm:max-w-2xl
+					lg:px-20 lg:py-24
+					xl:mr-0
+					2xl:col-span-2
+				"
+			>
+				<div class="xl:max-w-xl">
+					<img class="h-12" src="./assets/logo.png" alt="A dummy logo" />
+					<img
+						class="
+							mt-6
+							rounded-lg
+							shadow-xl
+							sm:mt-8 sm:h-80 sm:w-full sm:object-cover sm:object-bottom
+							lg:hidden
+						"
+						src="./assets/beach.jpeg"
+						alt="Beach Image"
+					/>
+					<h1 class="mt-6 text-xl font-bold text-gray-900 sm:text-3xl sm:mt-8">
+						Take some time for yourself.
+						<span class="text-green-600">
+							<br class="inline" />
+							Afterall, what's to live for?</span
+						>
+					</h1>
+					<p class="mt-3 text-gray-600 sm:mt-8 sm:text-xl">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
+						explicabo non dolorum veritatis, ratione delectus rerum repellendus
+						totam neque quas quibusdam aperiam illum quaerat, architecto
+						aspernatur necessitatibus qui adipisci cumque.
+					</p>
+					<button
+						class="
+							mt-6
+							sm:mt-8 sm:text-base
+							bg-green-500
+							px-6
+							py-4
+							rounded-lg
+							shadow-lg
+							uppercase
+							tracking-wide
+							text-sm
+							font-bold
+							text-green-100
+							hover:bg-green-600
+							transform
+							hover:-translate-y-1
+						"
+					>
+						Grab your escape..
+					</button>
+				</div>
+			</div>
+			<div class="hidden lg:block relative 2xl:col-span-3">
+				<img
+					class="absolute inset-0 w-full h-full object-cover object-bottom"
+					src="./assets/beach.jpeg"
+					alt="Beach Image"
+				/>
+			</div>
+		</article>
 	</body>
 </html>
