@@ -7,7 +7,7 @@ const fsPromises = require('fs').promises;
 
 const logEvents = async ( message ) => {
     const dateTime = `${format(new Date(), 'yyyyMMdd')}`;
-    const logItem = `${dateTime}\t${message}`;
+    const logItem = `${dateTime}\t${message}\n`;
     console.log(logItem);
     try{
         if (!fs.existsSync(path.join(__dirname, 'MyLogs'))){
