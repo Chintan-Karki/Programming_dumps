@@ -1,0 +1,19 @@
+{
+  "name": "just_a_timepass",
+  "version": "1.0.0",
+  "description": "NOt quite as expected",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chintan Karki",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

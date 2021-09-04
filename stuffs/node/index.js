@@ -1,5 +1,6 @@
 const os = require("os");
 const path = require("path");
+const {format} = require("date-fns")
 // const math = require("./math");
 
 console.log(os.type()); //      Darwin
@@ -12,6 +13,8 @@ console.log(__filename);
 console.log(path.basename(__filename));
 console.log(path.extname(__filename));
 console.log(path.parse(__filename));
+
+console.log(format(new Date(), 'yyyy-MM-dd'))
 /* 
 Expected output:
 { root: '/',
@@ -20,3 +23,4 @@ Expected output:
   ext: '.js',
   name: 'server' }
   */
+
