@@ -8,4 +8,4 @@ const myEmitter  = new MyEmitter;
 
 myEmitter.on('log', (msg) => logEvents(msg));
 
-myEmitter.emit('log', 'Hello there from the log event\t')
+myEmitter.emit('log', 'This is an event log\t')
