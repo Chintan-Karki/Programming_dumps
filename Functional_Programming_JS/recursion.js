@@ -40,13 +40,15 @@ function factorialRecursive(number){
     // Recursive case
     return number * factorialRecursive(number - 1);
 }
-console.time('factorialRecursive');
-console.log("Recursive Factorial: ",factorialRecursive(10))
-console.timeEnd('factorialRecursive');
-
-console.time('factorialIterative');
+console.time('factorialIterative took');
 console.log("Iterative Factorial: ",factorialIterative(10))
-console.timeEnd('factorialIterative');
+console.timeEnd('factorialIterative took');
+console.log("")
+
+console.time('factorialRecursive took');
+console.log("Recursive Factorial: ",factorialRecursive(10))
+console.timeEnd('factorialRecursive took');
+
 
 // Fibonacci 
 
@@ -74,10 +76,11 @@ function recursiveFibo(n){
     return recursiveFibo(n-1) + recursiveFibo(n-2);
 }
 
-console.time('iterativeFibo');
+console.time('Iterative Fibonacci took');
 console.log("Iterative Fibonacci: ",iterativeFibo(30))
-console.timeEnd('iterativeFibo');
+console.timeEnd('Iterative Fibonacci took');
+console.log("")
 
-console.time('recursiveFibo');
+console.time('Recursive Fibonacci took');
 console.log("Recursive Fibonacci: ",recursiveFibo(30)) //! Takes a lot of time
-console.timeEnd('recursiveFibo');
+console.timeEnd('Recursive Fibonacci took');
