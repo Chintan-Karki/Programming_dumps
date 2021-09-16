@@ -72,8 +72,13 @@ namespace learnC_
             //i.e. we need to cast it.
             Console.WriteLine((String)testHash["Name"]);
 
+            // Lets read from the users
+            Console.WriteLine("Hello there! What is your name ?");
+            string str = Console.ReadLine();
+            Console.WriteLine("Why, hello there " + str+ ". We are so happy to meet you." );
+
             //Unless console reads the program, the output is not gained
-            Console.Read();
+            // Console.Read();
         }
     }
 }
