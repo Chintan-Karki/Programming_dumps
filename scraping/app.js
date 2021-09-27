@@ -24,3 +24,8 @@ listItems.each((index, el) => {
     console.log($(el).text());
     // console.log($(index))
 })
+
+const ul = $("ul");
+ul.append("<li>Banana</li>");
+ul.prepend("<li>Pineapple</li>");
+console.log(pretty($.html()))
