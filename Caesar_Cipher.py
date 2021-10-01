@@ -1,11 +1,11 @@
 
 """
-The Caesar cipher is an ancient encryption algorithm used by 
-Julius Caesar. It encrypts letters by shifting them over by a 
-certain number of places in the alphabet. We call the length 
+The Caesar cipher is an ancient encryption algorithm used by
+Julius Caesar. It encrypts letters by shifting them over by a
+certain number of places in the alphabet. We call the length
 of shift the key. For example, if the key is 3, then A becomes D,
- B becomes E, C becomes F, and so on. To decrypt the message, 
-you must shift the encrypted letters in the opposite direction. 
+ B becomes E, C becomes F, and so on. To decrypt the message,
+you must shift the encrypted letters in the opposite direction.
 This program lets the user encrypt and decrypt messages according to this algorithm.
 """
 try:
@@ -49,7 +49,7 @@ original_message = original_message.upper()
 final_message = ''
 
 # Main cypher algorithm
-for possible_symbols in original_message:
+for letter in original_message:
     if letter in possible_symbols:
         # Get the letter's position/index
         letter_position = possible_symbols.find(letter)
@@ -67,4 +67,25 @@ for possible_symbols in original_message:
     else:
         final_message = final_message + letter
 
+print(final_message)
 
+try:
+    pyperclip.copy(final_message)
+    print('\n** The final text after {} has been copied to your clipboard. **'.format(choice))
+except:
+    pass
+
+while True:
+    print('\n--> Wanna learn more about Caesar\'s cpyher? (y)?')
+    user_decision = input(">> ").lower()
+    if user_decision.startswith('y'):
+        print('\nCaesar\'s cipher, the shift cipher, Caesar\'s code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.')
+
+        print()
+        print('For more details, Visit: https://en.wikipedia.org/wiki/Caesar_cipher')
+        print('\nSee you soon.')
+
+        break
+    else:
+        print('See you soon.')
+        break
