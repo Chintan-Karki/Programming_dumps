@@ -43,4 +43,28 @@ while True:
 print('Enter a text/sentence/code you want to perform {} on.'.format(choice))
 original_message = input('>> ')
 
+# since possible symbols are all in upper case 🙂
 original_message = original_message.upper()
+
+final_message = ''
+
+# Main cypher algorithm
+for possible_symbols in original_message:
+    if letter in possible_symbols:
+        # Get the letter's position/index
+        letter_position = possible_symbols.find(letter)
+        if choice == 'encryption':
+            letter_position = letter_position + chosen_key
+        elif choice == 'decryption':
+            letter_position = letter_position - chosen_key
+
+        if letter_position >= len(possible_symbols):
+            letter_position = letter_position - len(possible_symbols)
+        elif letter_position < 0:
+            letter_position = letter_position + len(possible_symbols)
+
+        final_message = final_message + possible_symbols[letter_position]
+    else:
+        final_message = final_message + letter
+
+
